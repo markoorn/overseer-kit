@@ -54,20 +54,16 @@ Each stage has a gate because every expensive failure below was a gate someone s
 7. **Export with sound on and off** and check both.
 8. **Reconcile spend** against the account's transactions ledger, not the balance.
 
-## Static ads: lessons
+## Lessons
 
-Add one entry per lesson, newest first.
+Seeded from the kit's `docs/generation-lessons.md` (setup copies it here in full). Those
+entries are brand-neutral and earned on real campaigns; keep them, and add this brand's
+own below in the same shape, newest first, each with the evidence that earned it.
+
+### This brand's lessons
 
 - **<date> <campaign>:** <what was tried> → <what was cut or kept> → <the rule>. Evidence:
   <quote or file>.
-
-## Video: lessons
-
-- **<date> <campaign>:** <...>
-
-## Captions: lessons
-
-- **<date> <campaign>:** <...>
 
 ## Start the next ad here
 

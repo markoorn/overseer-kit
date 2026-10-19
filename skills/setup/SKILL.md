@@ -156,8 +156,11 @@ because it is hard, mark it "not yet decided" so ad-brief can flag it.
   if they differ), three to five real example headlines that are on-voice, three that are
   off-voice, standing hashtags, words and claims that are banned, what self-deprecation is
   allowed to target.
-- `creative-playbook.md`: the concept-development method, the brief template, lessons
-  from real campaigns with the evidence for each. Starts nearly empty; it fills over time.
+- `creative-playbook.md`: the concept-development method, the brief template, and the
+  lessons. Seed its lessons section by copying the kit's `docs/generation-lessons.md` in
+  whole (under the template's "Lessons" heading), so the brand starts with every
+  production lesson the kit has rather than an empty list; it fills with the brand's own
+  from there.
 
 Also create the campaign records directory from `templates/campaigns/README.md` if it does
 not exist, and record its path in `OVERSEER.md` § Marketing.

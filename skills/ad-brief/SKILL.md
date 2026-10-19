@@ -106,8 +106,10 @@ it as a coming-soon teaser instead, but never write a launch ad for unshipped wo
   your composition vocabulary.
 - **`creative-playbook.md`**: the canonical creative process and its evidence-labelled
   lessons. It owns the concept-development method, the brief template, and the production
-  checks learned from real campaigns. **Do not restate its contents here**; reference it,
-  so there is one place to update. For a **video** brief it carries the checks this skill
+  checks learned from real campaigns (its lessons section starts as a copy of the kit's
+  `docs/generation-lessons.md`; if the playbook is missing that section, read the kit's
+  file directly). **Do not restate its contents here**; reference it, so there is one
+  place to update. For a **video** brief it carries the checks this skill
   does not duplicate (cast distinction at true phone size, the cast reference sheet,
   performance-and-edit rules, the export-with-sound-on-and-off check, and the rule that
   speech presence and intelligibility are listening-review findings an agent leaves

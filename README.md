@@ -31,8 +31,15 @@ templates/OVERSEER.md           the profile the agents read
 templates/brand/                brand-visual, brand-voice, creative-playbook skeletons
 templates/campaigns/README.md   the three campaign records ad-brief keeps
 addons/hooks/                   optional enforcement hooks (worktree guard, env secrets)
-docs/                           how it works, house style, Codex and other-tool install
+docs/                           how it works, house style, Codex and other-tool install,
+                                ad-brief getting started, generation lessons
 ```
+
+If you are here for the ad side, read `docs/ad-brief-guide.md` first: what to ask
+ad-brief for, which brand documents actually move the output, and why the production
+guidance assumes Higgsfield. `docs/generation-lessons.md` is the distilled production
+playbook (about ninety lessons from real campaigns, brand stripped out); setup seeds your
+own playbook with it.
 
 ## Install: Claude Code
 
