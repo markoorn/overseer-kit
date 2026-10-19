@@ -450,7 +450,11 @@ Get a proof of concept working fast, then refine. Validate against the real targ
 build it, exercise the actual behaviour, observe what happens, fix, and repeat in tight
 loops, rather than reasoning about correctness in the abstract for too long.
 
-Every question to the human is a numbered list, with the options under each question
+When the session has an interactive question tool (AskUserQuestion in Claude Code), a
+choice goes through it: one step at a time, at most three questions per call, two to four
+options each, your recommendation first and marked as such, the evidence in the question
+text. Do not put a whole interview in one text message. A question that is not a choice,
+or a session without the tool, is a numbered list, with the options under each question
 numbered too, so the answer can refer to them by number. A question carries the findings the
 answer turns on: the candidates, the options, the numbers, each in one line with its
 evidence. A count of findings is not context. When the human says they will read a document
