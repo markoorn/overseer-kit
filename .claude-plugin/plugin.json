@@ -1,0 +1,10 @@
+{
+  "name": "overseer-kit",
+  "description": "An overseer agent that plans, delegates to investigator/builder/verifier workers and refuses to call anything done without evidence; plus ad-brief (grounded ad concepts, no spend) and mockup (show it before you build it) skills, and a setup interview that adapts all of it to your repo.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Mark Oorn",
+    "url": "https://github.com/markoorn"
+  },
+  "keywords": ["agents", "overseer", "verification", "worktrees", "ad-brief", "mockup"]
+}

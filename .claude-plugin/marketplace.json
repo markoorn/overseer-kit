@@ -1,0 +1,18 @@
+{
+  "name": "overseer-kit",
+  "description": "Marketplace that lists the overseer-kit plugin, so `claude plugin marketplace add markoorn/overseer-kit` then `claude plugin install overseer-kit@overseer-kit` works.",
+  "owner": {
+    "name": "Mark Oorn",
+    "url": "https://github.com/markoorn"
+  },
+  "plugins": [
+    {
+      "name": "overseer-kit",
+      "source": {
+        "source": "github",
+        "repo": "markoorn/overseer-kit"
+      },
+      "description": "Overseer agent with investigator/builder/verifier workers, plus ad-brief, mockup and a setup interview."
+    }
+  ]
+}
