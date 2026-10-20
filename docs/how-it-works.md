@@ -28,26 +28,39 @@ connected on this machine, by whatever server name they carry), and asks what th
 initiative is. Anything not connected has a standing fallback: paste the ticket, use `gh`,
 mark logs and numbers as not checkable.
 
+**Three lanes.** The process scales to the work, and the overseer says which lane it chose:
+
+- *Direct*: a small, named change (a doc line, a wording fix, a commit). The overseer does
+  prose and git itself, or sends one builder for code, then reads the diff. No plan, no
+  verifier.
+- *Standard*: a bug fix or contained feature, through the stages below.
+- *Investigation*: a question, review or research. Investigators only.
+
+Every worker costs usage, so the overseer spawns one only when it buys something it cannot
+get more cheaply itself.
+
 **1. Intake.** Restates the ask in two sentences, classifies it, sizes it, lists unknowns,
 gets the ticket read (by an investigator, or by you pasting it). Asks if the ask has more
 than one reading.
 
-**2. Frame.** Turns each unknown into a narrow question for an investigator. Several run in
-parallel; they are read-only. Every brief is pre-flighted: paths checked with `ls`, branch
-freshness checked with a fetch. An investigator that hits a missing input replies `ERROR:`
-and stops rather than improvising.
+**2. Frame.** Turns each unknown it cannot close with one quick look into a narrow question
+for an investigator. Several run in parallel; they are read-only. Every brief is
+pre-flighted: paths checked with `ls`, branch freshness checked with a fetch. An
+investigator that hits a missing input replies `ERROR:` and stops rather than improvising.
 
 **3. Plan.** Steps, which worker does each, the worktree slug and branch name, what
-"verified" will concretely mean, whether the builder commits after each verifier pass, and
-what the overseer will ask you before doing. This is a hard stop: nothing is created until
-you say go.
+"verified" will concretely mean, whether commits follow each passing check, and what the
+overseer will ask you before doing. This is a hard stop: nothing is created until you say
+go.
 
 **4. Execute.** The overseer creates the worktree itself (git plumbing). The first builder's
 first act is the install command from `OVERSEER.md`. Builders run one at a time per
-worktree. After each builder, a fresh verifier gets the claim and the scope only, never the
-builder's reasoning, so it cannot inherit the builder's blind spots. Commits happen on a
-verifier pass. Two verifier failures on the same piece stop the run and bring both reports
-to you.
+worktree. Verification is proportional: for a behaviour change, a fresh verifier gets the
+claim and the scope only, never the builder's reasoning, so it cannot inherit the builder's
+blind spots; one verifier covers a coherent piece of work before its commit. Prose edits
+and "the file exists" are checked by the overseer reading them. The overseer commits after
+the check passes. Two verifier failures on the same piece stop the run and bring both
+reports to you.
 
 **5. Hand back.** Two lines you can read cold ("What this was", "What changed this
 round"), the worktree and branch, the commits, what was verified with the evidence, what

@@ -99,9 +99,12 @@ they are `/setup`, `/ad-brief`, `/mockup` and `overseer`.
 
 ## Models
 
-The overseer runs on your session's model (`model: inherit`); use the strongest one you
-have, since it is the judge. The workers are pinned to `opus` in their frontmatter; change
-that line if your account has a different strong model.
+Everything runs on `opus`, set in each agent's frontmatter. When the overseer is launched
+with `--agent`, its frontmatter `model:` sets the session's model; `--model` on the command
+line overrides it. A stronger, pricier model for the overseer is rarely worth it: in
+practice the overseer was most of a run's cost while doing no hands-on work, and on plans
+where the top model has its own weekly cap it draws down the shared limit faster. Change the
+lines if your account has a different strong model.
 
 ## House style
 
